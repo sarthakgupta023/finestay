@@ -1,17 +1,21 @@
 package com.finestay.practice.entity;
 
-public class journalentry {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-    private Long id;
+@Document
+public class Journalentry {
+    @Id
+    private String id;
     private String name;
     private String working;
 
     // Getter & Setter for id
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
